@@ -1,0 +1,75 @@
+export const emergencyCategories = [
+  {
+    id: 'police',
+    category: 'Police',
+    icon: 'Shield',
+    colorVar: '--blue',
+    bgVar: '--blue-light',
+    contacts: [
+      { name: 'Emergency Hotline', number: '911', isTapToCall: true },
+      { name: 'PNP Hotline', number: '117', isTapToCall: true },
+      { name: 'Cebu City Police Office', number: '(032) 416-1600', isTapToCall: true },
+    ],
+  },
+  {
+    id: 'fire',
+    category: 'Fire Bureau',
+    icon: 'Flame',
+    colorVar: '--red',
+    bgVar: '--red-light',
+    contacts: [
+      { name: 'Emergency Hotline', number: '911', isTapToCall: true },
+      { name: 'BFP Cebu City', number: '(032) 255-1346', isTapToCall: true },
+      { name: 'BFP Region 7 HQ', number: '(032) 232-2327', isTapToCall: true },
+    ],
+  },
+  {
+    id: 'medical',
+    category: 'Medical & Ambulance',
+    icon: 'HeartPulse',
+    colorVar: '--green',
+    bgVar: '--green-light',
+    contacts: [
+      { name: 'Emergency Medical Services', number: '911', isTapToCall: true },
+      { name: 'Philippine Red Cross Cebu', number: '(032) 253-0545', isTapToCall: true },
+      { name: 'CCMC Ambulance', number: '(032) 256-1741', isTapToCall: true },
+    ],
+  },
+  {
+    id: 'hospitals',
+    category: 'Hospitals',
+    icon: 'Building2',
+    colorVar: '--purple',
+    bgVar: '--purple-light',
+    contacts: [
+      { name: 'Vicente Sotto Medical Center', number: '(032) 253-9891', isTapToCall: true },
+      { name: 'Cebu City Medical Center', number: '(032) 256-1741', isTapToCall: true },
+      { name: 'Chong Hua Hospital', number: '(032) 255-8000', isTapToCall: true },
+      { name: 'Cebu Doctors\' University Hospital', number: '(032) 255-5555', isTapToCall: true },
+    ],
+  },
+  {
+    id: 'disaster',
+    category: 'Disaster & Weather',
+    icon: 'CloudLightning',
+    colorVar: '--gold',
+    bgVar: '--gold-light',
+    contacts: [
+      { name: 'CDRRMO Cebu City', number: '(032) 232-0886', isTapToCall: true },
+      { name: 'NDRRMC Operations', number: '(02) 8911-5061', isTapToCall: true },
+      { name: 'PAGASA Mactan Station', number: '(032) 340-5212', isTapToCall: true },
+    ],
+  },
+  {
+    id: 'coastguard',
+    category: 'Coast Guard',
+    icon: 'Anchor',
+    colorVar: '--blue',
+    bgVar: '--blue-light',
+    contacts: [
+      { name: 'PCG Cebu Station', number: '(032) 232-6527', isTapToCall: true },
+      { name: 'Maritime Distress (MRCC)', number: '(02) 527-8481', isTapToCall: true },
+      { name: 'VHF Radio Distress', number: 'Channel 16', isTapToCall: false },
+    ],
+  },
+];

@@ -1,0 +1,222 @@
+.section {
+  background: var(--bg);
+  padding: var(--section-padding) 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+/* ── Base Tile ── */
+.tile {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Left-bar accent — brand signature */
+.tile::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--border);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+  transition: background var(--transition);
+}
+
+.tileLink {
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.tileLink:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-hover);
+}
+
+.tileLink:hover::before {
+  background: var(--red);
+}
+
+/* ── Tile Icon ── */
+.tileIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Tile Body ── */
+.tileBody {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.tileEyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.tilePrimary {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.tileSecondary {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.tileTime {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.tileNote {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  font-style: italic;
+}
+
+.tileArrow {
+  color: var(--text-muted);
+  align-self: flex-end;
+  flex-shrink: 0;
+  transition: transform var(--transition), color var(--transition);
+}
+
+.tileLink:hover .tileArrow {
+  transform: translateX(3px);
+  color: var(--red);
+}
+
+/* Transport chips */
+.transportChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin: 0.25rem 0;
+}
+
+.transportChips span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--green);
+  background: var(--green-light);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+/* Date tile — non-interactive, cursor stays default */
+.tileDate {
+  cursor: default;
+}
+
+/* ── Emergency Tile ── */
+.tileEmergency {
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
+
+.tileEmergency::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tileEmergency:hover {
+  background: var(--red-dark);
+  border-color: var(--red-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-red);
+}
+
+.tileEmergency:hover::before {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tileEyebrowLight {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.tileNumberBig {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.1em;
+  line-height: 1;
+}
+
+.tileNoteLight {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin-top: 0.25rem;
+}
+
+.tileArrowLight {
+  color: rgba(255, 255, 255, 0.5);
+  align-self: flex-end;
+  flex-shrink: 0;
+  transition: transform var(--transition), color var(--transition);
+}
+
+.tileEmergency:hover .tileArrowLight {
+  transform: translateX(3px);
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tileNumberBig {
+    font-size: 1.875rem;
+  }
+}

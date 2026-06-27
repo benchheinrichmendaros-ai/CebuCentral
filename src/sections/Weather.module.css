@@ -1,0 +1,343 @@
+.section {
+  background: var(--surface);
+  padding: var(--section-padding) 0;
+}
+
+/* ── Notice ── */
+.notice {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--blue-light);
+  border: 1px solid rgba(29, 78, 216, 0.15);
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-bottom: 2rem;
+  font-size: 0.85rem;
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.noticeLink {
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: underline;
+}
+
+.noticeLink:hover {
+  color: #1e3a8a;
+}
+
+/* ── Current Conditions Card ── */
+.currentCard {
+  background: linear-gradient(135deg, #1a2e4a 0%, #1D4ED8 100%);
+  color: #fff;
+  border-radius: var(--radius-xl);
+  padding: 2rem 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.currentMain {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.currentIconWrap {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-lg);
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.currentIcon {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.currentLocation {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.currentTemp {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.currentCondition {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 0.25rem;
+  font-weight: 500;
+}
+
+.feelsLike {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+  margin-top: 0.15rem;
+}
+
+/* Stats grid */
+.currentStats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+}
+
+.stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statIcon {
+  color: rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+}
+
+.statVal {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── 7-Day Forecast ── */
+.forecastHeading {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.forecastRow {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+
+.forecastCard {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 90px;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.forecastCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.forecastDay {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.forecastIcon {
+  color: var(--blue);
+}
+
+.forecastCondition {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.forecastTemps {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tempHigh {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tempLow {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.rainBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 0.2rem 0.45rem;
+  border-radius: var(--radius-full);
+}
+
+.rainLow  { background: var(--green-light);  color: var(--green); }
+.rainMed  { background: var(--gold-tint);    color: var(--gold-dark); }
+.rainHigh { background: var(--blue-light);   color: var(--blue); }
+
+/* ── Seasonal Card ── */
+.seasonCard {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.seasonBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: var(--gold-tint);
+  color: var(--gold-dark);
+  border: 1px solid var(--gold-border, #fde68a);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.seasonNote {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.seasonGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.seasonItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.seasonLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.seasonVal {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.typhoonRisk {
+  color: var(--red);
+}
+
+/* ── Sources ── */
+.sources {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.sourcesLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.sourceLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sourceLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue);
+  background: var(--blue-light);
+  border: 1px solid rgba(29, 78, 216, 0.15);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: background var(--transition), color var(--transition);
+  text-decoration: none;
+}
+
+.sourceLink:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .currentCard {
+    grid-template-columns: 1fr;
+  }
+
+  .currentMain {
+    flex-wrap: wrap;
+  }
+
+  .forecastRow {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .currentTemp {
+    font-size: 2.75rem;
+  }
+
+  .forecastRow {
+    grid-template-columns: repeat(4, minmax(90px, 1fr));
+  }
+}

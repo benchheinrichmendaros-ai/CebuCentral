@@ -1,0 +1,256 @@
+.section {
+  background: var(--red-tint);
+  padding: var(--section-padding) 0;
+}
+
+/* ── Alert Banner ── */
+.alertBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: var(--red);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.25rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  box-shadow: var(--shadow-red);
+}
+
+.alertBanner svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.alertNumber {
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.125rem;
+  font-family: var(--font-display);
+  text-decoration: underline;
+  transition: opacity var(--transition);
+}
+
+.alertNumber:hover {
+  opacity: 0.85;
+}
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Card ── */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), transform var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Left accent bar */
+.card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--red);
+  border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.iconWrap {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.categoryName {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+/* ── Contact List ── */
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contactItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contactName {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  flex: 1;
+  line-height: 1.4;
+}
+
+/* Tap-to-call link */
+.contactNumber {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--red);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color var(--transition), background var(--transition);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+}
+
+.contactNumber:hover {
+  background: var(--red-light);
+  border-color: var(--red-border, #f8c5c0);
+}
+
+.callIcon {
+  flex-shrink: 0;
+  opacity: 0.7;
+}
+
+.contactNumberStatic {
+  font-family: var(--font-display);
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* ── Quick Dial Strip ── */
+.quickDial {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-sm);
+}
+
+.quickDialLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.quickDialNumbers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.quickDialBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--red-light);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  border-radius: var(--radius-md);
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  color: var(--red);
+  transition: background var(--transition), box-shadow var(--transition),
+    transform var(--transition);
+}
+
+.quickDialBtn:hover {
+  background: var(--red);
+  color: #fff;
+  box-shadow: var(--shadow-red);
+  transform: translateY(-1px);
+}
+
+.quickDialNum {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.quickDialSub {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.8;
+  border-left: 1px solid currentColor;
+  padding-left: 0.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quickDial {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .quickDialBtn {
+    flex: 1;
+    min-width: 0;
+  }
+}

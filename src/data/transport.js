@@ -96,7 +96,7 @@ export const transportOptions = [
     icon: 'Bike',
     tag: 'Motorbike',
     description:
-      'Motorcycle taxis fill the gap in areas buses and jeepneys can't reach — especially hillside barangays, towns outside the city, and tourist spots.',
+      "Motorcycle taxis fill the gap in areas buses and jeepneys can't reach — especially hillside barangays, towns outside the city, and tourist spots.",
     tips: [
       'Negotiate the fare clearly before you ride',
       'Common in Moalboal, Oslob, and mountain barangays',

@@ -82,7 +82,7 @@ export const transportOptions = [
     icon: 'Truck',
     tag: 'City Routes',
     description:
-      'Modernized e-jeepneys are Cebu's backbone public transport. They follow fixed routes across the city and are the cheapest way to get around Metro Cebu.',
+      "Modernized e-jeepneys are Cebu's backbone public transport. They follow fixed routes across the city and are the cheapest way to get around Metro Cebu.",
     tips: [
       'Minimum fare starts at ₱15–₱18 for the first 4km',
       'Pass your fare forward to the driver — common practice',

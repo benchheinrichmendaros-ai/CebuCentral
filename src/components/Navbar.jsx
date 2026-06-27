@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ImageIcon } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import styles from './Navbar.module.css';
 
 const NAV_LINKS = [
@@ -27,9 +27,13 @@ export default function Navbar() {
       <div className={`container ${styles.inner}`}>
         {/* Brand */}
         <a href="#" className={styles.brand} onClick={handleNavClick}>
-          <span className={styles.logoPlaceholder} title="Logo goes here">
-            <ImageIcon size={16} strokeWidth={1.5} />
-          </span>
+          <img
+  src="/logo.png"
+  alt="CebuCentral logo"
+  width="36"
+  height="36"
+  style={{ display: 'block' }}
+/>
           <span className={styles.brandName}>
             Cebu<span className={styles.brandAccent}>Central</span>
           </span>

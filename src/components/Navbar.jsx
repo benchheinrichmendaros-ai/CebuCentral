@@ -28,7 +28,7 @@ export default function Navbar() {
         {/* Brand */}
         <a href="#" className={styles.brand} onClick={handleNavClick}>
           <img
-  src="public/logo.png"
+  src="public/Logo.png"
   alt="CebuCentral logo"
   width="36"
   height="36"

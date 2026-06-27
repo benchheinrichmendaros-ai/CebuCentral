@@ -58,7 +58,7 @@ export default function Hero() {
         <div className={styles.visual} aria-hidden="true">
           <div className={styles.logoPlaceholderArea}>
             <img
-  src="/logo.png"
+  src="public/logo.png"
   alt="CebuCentral"
   style={{
     width: '180px',

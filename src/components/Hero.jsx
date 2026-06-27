@@ -1,4 +1,4 @@
-import { ArrowRight, Phone, ImageIcon } from 'lucide-react';
+import { ArrowRight, Phone } from 'lucide-react';
 import Button from './Button';
 import styles from './Hero.module.css';
 
@@ -57,10 +57,15 @@ export default function Hero() {
         {/* Right — Logo Placeholder + Visual */}
         <div className={styles.visual} aria-hidden="true">
           <div className={styles.logoPlaceholderArea}>
-            <div className={styles.logoFrame}>
-              <ImageIcon size={40} strokeWidth={1.2} />
-              <p className={styles.logoHint}>Your logo here</p>
-            </div>
+            <img
+  src="/logo.png"
+  alt="CebuCentral"
+  style={{
+    width: '180px',
+    height: 'auto',
+    display: 'block',
+  }}
+/>
           </div>
 
           {/* Floating info cards for visual interest */}

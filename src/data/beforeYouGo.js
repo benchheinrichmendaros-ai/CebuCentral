@@ -13,7 +13,7 @@ export const checklistItems = [
     icon: 'MapPin',
     title: 'Plan your route',
     description:
-      'Know which transport you'll use and where the terminal or stop is before you leave.',
+      "Know which transport you'll use and where the terminal or stop is before you leave.",
     actionLabel: 'Transport Guide',
     actionHref: '#transportation',
   },
